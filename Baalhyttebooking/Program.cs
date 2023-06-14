@@ -41,7 +41,7 @@ namespace Baalhyttebooking
             Console.WriteLine();
 
             rs1.ReservationOK(r1);
-            Console.WriteLine(rs1.ReservationOK(r1));
+            Console.WriteLine($"true or false :{ rs1.ReservationOK(r1)}");
 
         }
     }
