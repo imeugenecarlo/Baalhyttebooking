@@ -1,4 +1,6 @@
-﻿namespace Baalhyttebooking
+﻿using System.ComponentModel;
+
+namespace Baalhyttebooking
 {
     public class Program
     {
@@ -20,6 +22,27 @@
             Reservation r2 = new Reservation(2, new DateTime().AddYears(2023).AddMonths(8).AddDays(16).AddHours(12).AddMinutes(30), b2);
             Console.WriteLine(r1);
             Console.WriteLine(r2);
+            Console.WriteLine();
+
+            Console.WriteLine("Opgave 6 TEST CRUD");
+            Console.WriteLine();
+
+            Reservationer rs1 = new Reservationer(1);
+
+            rs1.RegistrerReservation(r1);
+            rs1.RegistrerReservation(r2);
+            rs1.PrintReservationer();
+            Console.WriteLine("test af Fjern method");
+            rs1.FjernReservation(r1);
+            rs1.PrintReservationer();
+            Console.WriteLine();
+
+            Console.WriteLine("Opgave 8 TEST A METHODS");
+            Console.WriteLine();
+
+            rs1.ReservationOK(r1);
+            Console.WriteLine(rs1.ReservationOK(r1));
+
         }
     }
 }
